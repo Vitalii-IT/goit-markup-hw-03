@@ -18,6 +18,8 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /* HEADER */
 
@@ -80,16 +82,19 @@ body {
 
 .hero {
   background-color: var(--hero-bcg);
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--bcg-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  text-align: center;
 }
 
 button {
@@ -110,9 +115,20 @@ button {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  padding: 10px 19px 10px 20px;
 }
 
 /* Sections */
+
+.part {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.part.no-padding {
+  padding-top: 0;
+}
 
 .part-title {
   color: var(--secondary-text-color);
@@ -120,6 +136,9 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 .features-title {
   color: var(--secondary-text-color);
@@ -127,11 +146,16 @@ button {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .features .text {
   font-size: 14px;
   line-height: 1.71;
+
+  margin: 0;
 }
 
 /* Our team */
@@ -144,16 +168,26 @@ button {
   background-color: var(--bcg-color);
 }
 
+.team-photo {
+  margin-bottom: 30px;
+}
+
 .team-names {
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .team-text {
   font-size: 16px;
   line-height: 1.19;
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Футер */
@@ -176,7 +210,11 @@ button {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+
+  margin-top: 20px;
+  margin-bottom: 9px;
 }
+
 
 .lower-contacts .link {
   color: var(--lower-contacts);
@@ -206,7 +244,9 @@ button {
   margin: -1px;
 }
 
-.filters .click {  
+.filters .click {
+  padding: 6px 22px;
+
   border-radius: 4px;
 
   font-weight: 500;
@@ -222,35 +262,36 @@ button {
 .filters .click:focus {
   color: var(--bcg-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  padding: 6px 25px;
 }
 
-.click.all{
+.click.all {
   width: 73px;
   height: 38px;
   left: 512px;
   top: 174px;
 }
-.click.web{
-    width: 125px;
-    height: 38px;
-    left: 593px;
-    top: 174px;
-
+.click.web {
+  min-width: 125px;
+  height: 38px;
+  left: 593px;
+  top: 174px;
 }
-.click.app{
+.click.app {
   width: 112px;
   height: 38px;
   left: 726px;
   top: 174px;
 }
-.click.des{
+.click.des {
   width: 103px;
   height: 38px;
   left: 846px;
   top: 174px;
 }
-.click.mark{
+.click.mark {
   width: 130px;
   height: 38px;
   left: 957px;
@@ -263,6 +304,8 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 
 .works-link {
@@ -273,4 +316,14 @@ button {
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid;
 }
