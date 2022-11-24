@@ -17,13 +17,33 @@ body {
 }
 
 .list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 /* HEADER */
 
+.upper-block {
+  display: flex;
+  align-items: center;
+}
+
+.site-navig {
+  display: flex;
+  align-items: center;
+  /* margin-right: 344px; */
+}
+
 /* logo */
+.logo-black {
+  color: var(--logo-upper);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
 
 .logo-blue {
   color: var(--accent-color);
@@ -34,18 +54,36 @@ body {
   text-decoration: none;
 }
 
-.logo-black {
-  color: var(--logo-upper);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
 /* site-nav header*/
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+/* .site-nav .item {
+  background-color: green;
+
+  margin-right: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+} */
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -64,7 +102,19 @@ body {
 
 /* contacts header */
 
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+
 .contacts .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -102,6 +152,9 @@ button {
 }
 
 .hero-button {
+  padding: 10px 32px 10px 32px;
+  border-radius: 4px;
+
   color: var(--bcg-color);
   background-color: var(--accent-color);
   border-color: transparent;
@@ -114,9 +167,6 @@ button {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
-  padding: 10px 19px 10px 20px;
 }
 
 /* Sections */
@@ -131,31 +181,31 @@ button {
 }
 
 .part-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 .features-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .features .text {
+  margin: 0;
+
   font-size: 14px;
   line-height: 1.71;
-
-  margin: 0;
 }
 
 /* Our team */
@@ -173,21 +223,21 @@ button {
 }
 
 .team-names {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .team-text {
-  font-size: 16px;
-  line-height: 1.19;
-
   margin-top: 0;
   margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.19;
 }
 
 /* Футер */
@@ -206,15 +256,14 @@ button {
 }
 
 .address {
+  margin-top: 20px;
+  margin-bottom: 9px;
+
   color: var(--bcg-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-
-  margin-top: 20px;
-  margin-bottom: 9px;
 }
-
 
 .lower-contacts .link {
   color: var(--lower-contacts);
@@ -260,11 +309,12 @@ button {
 }
 .filters .click:hover,
 .filters .click:focus {
+  padding: 6px 25px;
+
   color: var(--bcg-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  padding: 6px 25px;
 }
 
 .click.all {
@@ -299,13 +349,14 @@ button {
 }
 
 .works-title {
+  margin-top: 20px;
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
-  margin-top: 20px;
-  margin-bottom: 4px;
 }
 
 .works-link {
@@ -313,11 +364,12 @@ button {
 }
 
 .works-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
-  margin-top: 0;
-  margin-bottom: 20px;
 }
 
 .container {
