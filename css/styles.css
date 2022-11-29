@@ -24,10 +24,13 @@ body {
 }
 /* HEADER */
 
+.upper {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
 .upper-block {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
 .site-navig {
@@ -129,13 +132,17 @@ body {
 /* MAIN */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--hero-bcg);
   text-align: center;
 }
 
 .hero-title {
   margin-top: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
+  max-width: 696px;
 
   color: var(--bcg-color);
   font-weight: 900;
@@ -221,9 +228,21 @@ button {
 
 /* Чим ми займаємось */
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .job {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.job .item {
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 /* Our team */
@@ -234,10 +253,18 @@ button {
 
 .team {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team-item {
+  flex-basis: calc((100% - 90px) / 4);
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
   background-color: var(--bcg-color);
 }
 
@@ -266,6 +293,9 @@ button {
 /* Футер */
 
 .lower {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--hero-bcg);
 }
 
@@ -278,12 +308,12 @@ button {
   text-decoration: none;
 }
 
-.lower-logo {
-  padding-top: 60px;
+.addr {
+  margin-top: 20px;
 }
 
 .address {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 9px;
 
   color: var(--bcg-color);
@@ -309,10 +339,6 @@ button {
   margin-bottom: 9px;
 }
 
-.lower-contacts .phone {
-  padding-bottom: 60px;
-}
-
 /* PORTFOLIO STYLES */
 
 .visually-hidden {
@@ -331,11 +357,7 @@ button {
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
-}
-
-.filters .item {
-  padding-bottom: 16px;
+  margin-bottom: 50px;
 }
 
 .filters .item + .item {
@@ -358,43 +380,10 @@ button {
 }
 .filters .click:hover,
 .filters .click:focus {
-  padding: 6px 25px;
-
   color: var(--bcg-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.click.all {
-  width: 73px;
-  height: 38px;
-  left: 512px;
-  top: 174px;
-}
-.click.web {
-  min-width: 125px;
-  height: 38px;
-  left: 593px;
-  top: 174px;
-}
-.click.app {
-  width: 112px;
-  height: 38px;
-  left: 726px;
-  top: 174px;
-}
-.click.des {
-  width: 103px;
-  height: 38px;
-  left: 846px;
-  top: 174px;
-}
-.click.mark {
-  width: 130px;
-  height: 38px;
-  left: 957px;
-  top: 174px;
 }
 
 .works {
@@ -408,12 +397,13 @@ button {
 }
 
 .card-border {
-  border: 1px solid rgba(238, 238, 238, 1);
-  margin-top: -5px;
+  border-left: 1px solid rgba(238, 238, 238, 1);
+  border-right: 1px solid rgba(238, 238, 238, 1);
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+  padding: 20px 24px;
 }
 
 .works-title {
-  margin-top: 20px;
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -429,7 +419,6 @@ button {
 
 .works-text {
   margin-top: 0;
-  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.88;
